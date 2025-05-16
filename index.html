@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<!-- Bloqueia botão direito -->
+<script>
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
+</script>
+
+<body>
+    <div class="container">
+        <!-- Cabeçalho separado -->
+        <header class="header">
+
+            <h1><i class="fas fa-user-plus"></i> Sistema de Cadastro</h1>
+
+        </header>
+
+        <br>
+        <div class="grid-layout">
+            <!-- Formulário de Cadastro -->
+            <div class="card">
+                <div id="mensagem"></div>
+
+
+                <form id="cadastroForm">
+                    <div class="campo">
+                        <label for="nome"><i class="fas fa-user"></i> Nome</label>
+                        <input type="text" id="nome" name="nome" required />
+                    </div>
+
+                    <div class="campo">
+                        <label for="funcao"><i class="fas fa-briefcase"></i> Função</label>
+                        <select id="funcao" name="funcao" required>
+                            <option value="">Selecione uma função</option>
+                            <option value="estudante">Estudante</option>
+                            <option value="funcionario">Funcionário</option>
+                            <option value="convidado">Convidado</option>
+                        </select>
+                    </div>
+
+                    <div class="campo" id="campoTurma" style="display:none;">
+                        <label for="turma"><i class="fas fa-users"></i> Turma</label>
+                        <select id="turma" name="turma">
+                            <option value="">Selecione uma turma</option>
+                            <option value="Informática">Informática</option>
+                            <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+                            <option value="Massoterapia">Massoterapia</option>
+                            <option value="Estética">Estética</option>
+                            <option value="Administração">Administração</option>
+                        </select>
+                    </div>
+
+                    <div class="botoes">
+                        <button type="button" class="btn azul" id="limpar">
+                            <i class="fas fa-eraser"></i> Limpar
+                        </button>
+                        <!--Botão de relatórios-->
+                        <!-- <button type="button" class="btn verde" onclick="window.location.href='relatorio.php'">
+                            <i class="fas fa-file-alt"></i> Relatórios
+                        </button> -->
+                        <button type="submit" class="btn vermelho">
+                            <i class="fas fa-save"></i> Cadastrar
+                        </button>
+                    </div>
+                </form>
+                <div id="mensagem" class="mensagem">Cadastrado com sucesso!</div>
+                <div id="keyboard" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p id="dataAtual"></p>
+        <p id="direito">4CALS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

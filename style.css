@@ -1,0 +1,261 @@
+:root {
+  --pastel-rosa: #FFD6E0;
+  --pastel-azul: #C1E3FF;
+  --azul-medio: #4d8ec3;
+  --azul-intermedio: #89c4f4;
+  --pastel-verde: #D0F0C0;
+  --pastel-lilas: #E2D1F9;
+  --pastel-amarelo: #FFF9C4;
+  --cinza-claro: #F8F9FA;
+  --texto-escuro: #3A3A3A;
+  --vermelho-pastel: #f59f9f;
+  --sombra: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --borda-arredondada: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #f8f9fa;
+  padding: 3rem;
+  border-radius: 40px;
+  width: 900px; /* AUMENTADO */
+  max-width: 100%;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+h1 span {
+  color: var(--azul-intermedio);
+  font-size: 2.8rem;
+  display: block;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.campo {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #4d4d4d;
+  font-size: 1.4rem;
+}
+
+input,
+select {
+  padding: 1.2rem 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  background: #f7f9fb;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease-in-out;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #a5b4fc;
+  background: #eef2ff;
+}
+
+.botoes {
+  display: flex;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.vermelho {
+  background-color:  #88d8b0;
+}
+
+.verde {
+  background-color: #f59f9f;
+}
+
+.azul {
+  background-color: #89c4f4;
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+.mensagem {
+  display: none;
+  margin-top: 2rem;
+  padding: 1.2rem;
+  background: #d7f7dc;
+  color: #2c662d;
+  border: 1px solid #a8e6a3;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: var(--borda-arredondada);
+  padding: 2rem;
+  box-shadow: var(--sombra);
+  transition: transform 0.3s ease;
+}
+
+.header {
+  text-align: center;
+  background: var(--azul-intermedio);
+  color: rgb(255, 255, 255);
+  border-radius: var(--borda-arredondada);
+  box-shadow: var(--sombra);
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+/* Teclado */
+#keyboard {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  padding: 2rem;
+  border-radius: var(--borda-arredondada);
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 10000px; /* AUMENTADO */
+  margin-left: -35px;
+  margin-right: auto;
+}
+
+.keyboard-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.key {
+  background-color: var(--azul-intermedio);
+  border: none;
+  border-radius: 14px;
+  padding: 1.5rem 1.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--cinza-claro);
+  cursor: pointer;
+  user-select: none;
+  flex: 1;
+  max-width: 110px; /* AUMENTADO */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.15s ease;
+}
+
+.key:hover {
+  background-color: var(--azul-medio);
+  transform: scale(1.05);
+  timeline-scope: 0.5;
+}
+
+.key:active {
+  background-color: #2f6795;
+}
+
+.key.wide {
+  max-width: 65px; /* AUMENTADO */
+  flex: 1.3;
+}
+
+.key.extra-wide {
+  max-width: 500px; /* AUMENTADO */
+  flex: 6;
+}
+
+.key.active-caps {
+  background-color: #2f6795;
+}
+
+.key-dot {
+  max-width: 95px; /* AUMENTADO */
+  flex: 1;
+  padding: 1rem 1.2rem;
+}
+
+select {
+  font-size: 1.5rem;
+  padding: 1.5vh 1.5vw;
+  border-radius: 20px;
+  background: #f7f9fb;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease-in-out;
+  appearance: none;
+}
+
+select:focus {
+  border-color: #a5b4fc;
+  background: #eef2ff;
+}
+
+select option {
+  font-size: 2rem;
+  padding: 0.5vh 1vw;
+}
+
+
+/* rodapé */
+footer {
+  font-size: 1.5vh;
+  color: white;
+  text-align: center;
+  background-color: #89c4f4;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position:fixed;
+  bottom: 0;
+  padding: 0 20px;
+}
+
+/* Caso tenha um elemento dentro do rodapé */
+footer p {
+  margin-left: 20px; /* Empurra o texto levemente para a direita */
+}
+
+#dataAtual {
+  margin-left: 20px;
+}
+
+#direito {
+  margin-right: 20px;
+}
